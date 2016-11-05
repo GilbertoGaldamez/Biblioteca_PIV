@@ -11,5 +11,7 @@ namespace Biblioteca.Data.Modelos
         // Propiedades:
         public int Id { get; set; }     // Id: Framework lo coloca como llave primaria
         public string Nombre { get; set; }
+        public int Año { get; set; }
+        public Editorial Editorial { get; set; }
     }
 }

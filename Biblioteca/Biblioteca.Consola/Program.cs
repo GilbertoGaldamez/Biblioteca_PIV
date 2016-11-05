@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Biblioteca.Data;
+using Biblioteca.Data.Modelos;
 
 namespace Biblioteca.Consola
 {
@@ -10,8 +12,18 @@ namespace Biblioteca.Consola
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hola mundo");
-            Console.ReadKey();
+            using (var context = new BibliotecaContext("BibliotecaMaestro"))
+            {
+                var nuevoLibro = new Libro();
+                nuevoLibro.Nombre = "Otro Libro";
+                nuevoLibro.Año = 2016;
+                context.Libros.Add(nuevoLibro);
+                context.SaveChanges();
+
+                Console.WriteLine("Hola mundo");
+                Console.ReadKey();
+            }
+                
         }
     }
 }
