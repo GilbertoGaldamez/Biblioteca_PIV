@@ -12,7 +12,7 @@ namespace Biblioteca.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Nombre = c.String(),
+                        nombre = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             

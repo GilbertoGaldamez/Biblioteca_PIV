@@ -7,12 +7,12 @@ namespace Biblioteca.Data.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Libroes", "Año", c => c.Int(nullable: false));
+            AddColumn("dbo.Libroes", "año", c => c.Int(nullable: false));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Libroes", "Año");
+            DropColumn("dbo.Libroes", "año");
         }
     }
 }

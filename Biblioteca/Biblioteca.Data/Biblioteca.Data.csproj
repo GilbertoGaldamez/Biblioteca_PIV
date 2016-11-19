@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{46EA5DDA-008D-47BF-8316-89F5E47FF6FD}</ProjectGuid>
+    <ProjectGuid>{C1F17521-0AC2-4F7E-94BB-FBF483A9736E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Biblioteca.Data</RootNamespace>
@@ -50,13 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BibliotecaContext.cs" />
-    <Compile Include="Migrations\201610292045369_initialCreate.cs" />
-    <Compile Include="Migrations\201610292045369_initialCreate.Designer.cs">
-      <DependentUpon>201610292045369_initialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201610292044100_initialCreate.cs" />
+    <Compile Include="Migrations\201610292044100_initialCreate.Designer.cs">
+      <DependentUpon>201610292044100_initialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610292057265_agregarEditorial.cs" />
-    <Compile Include="Migrations\201610292057265_agregarEditorial.Designer.cs">
-      <DependentUpon>201610292057265_agregarEditorial.cs</DependentUpon>
+    <Compile Include="Migrations\201610292057028_agregarEditorial.cs" />
+    <Compile Include="Migrations\201610292057028_agregarEditorial.Designer.cs">
+      <DependentUpon>201610292057028_agregarEditorial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelos\Editorial.cs" />
@@ -68,11 +68,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610292045369_initialCreate.resx">
-      <DependentUpon>201610292045369_initialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610292044100_initialCreate.resx">
+      <DependentUpon>201610292044100_initialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610292057265_agregarEditorial.resx">
-      <DependentUpon>201610292057265_agregarEditorial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610292057028_agregarEditorial.resx">
+      <DependentUpon>201610292057028_agregarEditorial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

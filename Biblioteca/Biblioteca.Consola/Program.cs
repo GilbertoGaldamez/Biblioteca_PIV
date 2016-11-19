@@ -15,15 +15,16 @@ namespace Biblioteca.Consola
             using (var context = new BibliotecaContext("BibliotecaMaestro"))
             {
                 var nuevoLibro = new Libro();
-                nuevoLibro.Nombre = "Otro Libro";
-                nuevoLibro.Año = 2016;
+                nuevoLibro.nombre = "Otro Libro";
+                nuevoLibro.año = 2000;
+
                 context.Libros.Add(nuevoLibro);
                 context.SaveChanges();
 
-                Console.WriteLine("Hola mundo");
+                Console.WriteLine("Hola Mundo");
                 Console.ReadKey();
             }
-                
         }
     }
 }
+

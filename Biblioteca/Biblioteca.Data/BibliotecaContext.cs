@@ -10,12 +10,15 @@ namespace Biblioteca.Data
 {
     public class BibliotecaContext: DbContext
     {
-        public BibliotecaContext() { }
-        public BibliotecaContext(string ConnectionName):base(ConnectionName)//creamos este constructor porque nos tiraba error en Program.cs* y llamamos al contructor padre.
+        public BibliotecaContext()
         {
-            
+
         }
-        public DbSet<Libro> Libros { get; set; }    // Tabla de Libros | <Libro>: Objeto de tipo Libro
+        public BibliotecaContext(string ConnectionName):base(ConnectionName)
+        {
+
+        }
+        public DbSet<Libro> Libros { get; set; }
         public DbSet<Editorial> Editoriales { get; set; }
     }
 }

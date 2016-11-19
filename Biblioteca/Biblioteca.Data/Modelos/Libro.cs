@@ -8,10 +8,10 @@ namespace Biblioteca.Data.Modelos
 {
     public class Libro
     {
-        // Propiedades:
-        public int Id { get; set; }     // Id: Framework lo coloca como llave primaria
-        public string Nombre { get; set; }
-        public int Año { get; set; }
+        public int id { get; set; }
+        public string nombre { get; set; }
+        public int año { get; set; }
         public Editorial Editorial { get; set; }
     }
+
 }

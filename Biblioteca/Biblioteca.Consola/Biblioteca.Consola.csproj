@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DF9A122F-C9A5-4AEF-9ECE-B8C4BEF22796}</ProjectGuid>
+    <ProjectGuid>{908EA3CF-A9E9-4396-A317-1F310A8A8734}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Biblioteca.Consola</RootNamespace>
@@ -60,11 +60,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Biblioteca.Data\Biblioteca.Data.csproj">
-      <Project>{46ea5dda-008d-47bf-8316-89f5e47ff6fd}</Project>
+      <Project>{c1f17521-0ac2-4f7e-94bb-fbf483a9736e}</Project>
       <Name>Biblioteca.Data</Name>
     </ProjectReference>
   </ItemGroup>
