@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Biblioteca.Data;
 using Biblioteca.Data.Modelos;
 
@@ -15,16 +11,14 @@ namespace Biblioteca.Consola
             using (var context = new BibliotecaContext("BibliotecaMaestro"))
             {
                 var nuevoLibro = new Libro();
-                nuevoLibro.nombre = "Otro Libro";
-                nuevoLibro.año = 2000;
-
+                nuevoLibro.Nombre = "Otro libro";
+                nuevoLibro.Año = 2000;
                 context.Libros.Add(nuevoLibro);
                 context.SaveChanges();
 
-                Console.WriteLine("Hola Mundo");
+                Console.WriteLine("Hola mundo");
                 Console.ReadKey();
-            }
+            }   
         }
     }
 }
-

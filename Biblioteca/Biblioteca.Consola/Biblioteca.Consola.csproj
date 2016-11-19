@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{908EA3CF-A9E9-4396-A317-1F310A8A8734}</ProjectGuid>
+    <ProjectGuid>{EB0513E2-C8DF-43CF-B65C-2E7E3C6A5BAD}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Biblioteca.Consola</RootNamespace>
@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Biblioteca.Data\Biblioteca.Data.csproj">
-      <Project>{c1f17521-0ac2-4f7e-94bb-fbf483a9736e}</Project>
+      <Project>{da8df7d8-fd81-49f8-bb63-0548a4ac7bba}</Project>
       <Name>Biblioteca.Data</Name>
     </ProjectReference>
   </ItemGroup>
