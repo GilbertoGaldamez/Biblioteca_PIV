@@ -17,5 +17,7 @@ namespace Biblioteca.Data
         }
         public DbSet<Libro> Libros { get; set; }    // Tabla de Libros | <Libro>: Objeto de tipo Libro
         public DbSet<Editorial> Editoriales { get; set; }
+
+        public DbSet<Autor> Autores { get; set; }
     }
 }
