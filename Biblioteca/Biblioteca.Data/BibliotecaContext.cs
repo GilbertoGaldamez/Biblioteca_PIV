@@ -19,7 +19,7 @@ namespace Biblioteca.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder);// no pluraliza los nombres
         }
     }
 }

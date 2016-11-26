@@ -12,6 +12,7 @@ namespace Biblioteca.Host.Controllers
     {
         BibliotecaContext bibliotecaContext =
             new BibliotecaContext(WebConfigurationManager.AppSettings["connectionStringParaUsar"]);
+        //BUSCA EN EL WEB.CONFI LA LLAVE PARA ENLAZAR A LA BASE DE DATOS YA SEA POR SQL O LOCAL
 
         protected override void Dispose(bool disposing)
         {

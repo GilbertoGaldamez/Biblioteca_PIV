@@ -1,10 +1,12 @@
 ﻿app.controller(
-    'homeController',
+    'homeController', // nombre del controler debe ser unico
     [
-        '$scope',
-        function ($scope) {           //esta funcion es el controlador. aqui va todo lo que quiero que haga
-            $scope.saludo = "hola mundo con angular y el controlador";
+        '$scope', //le da acceso al controlador lo que tiene acceso o no
+        function ($scope) {
+            $scope.saludo = "Hola mundo con angular y controlador"; // el saludo se crea como un miembro
+
         }
     ]
+    
 
     );

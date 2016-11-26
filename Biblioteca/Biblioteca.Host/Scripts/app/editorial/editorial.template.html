@@ -1,0 +1,37 @@
+﻿<form>
+    <div class="form-group">
+        <label for="editorialId">Id</label>
+        <input 
+               class="form-control" 
+               id="editorialId" 
+               ng-model="editorialActual.id" 
+               ng-disabled="true"/>     <!-- impide modificar el Id -->
+    </div>
+    <div class="form-group">
+        <label for="editorialNombre">Nombre</label>
+        <input 
+               class="form-control" 
+               id="editorialNombre"
+               ng-model="editorialActual.nombre" />
+    </div>
+    <div>
+        <div class="form-group">
+            <button class="btn btn-primary">Salvar</button>
+            <button class="btn btn-default">Cancelar</button>
+        </div>
+    </div>
+</form>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="editorial in editoriales">
+        <td>{{editorial.id}}</td>
+        <td>{{editorial.nombre}}</td>
+        <td>
+            <button class="btn btn-link">Editar</button>
+        </td>
+    </tr>
+</table>

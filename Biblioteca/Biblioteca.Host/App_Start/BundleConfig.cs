@@ -25,11 +25,14 @@ namespace Biblioteca.Host
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/angular.js",
-                 "~/Scripts/angular-route.js",
+                "~/Scripts/angular-route.js",
                 "~/Scripts/app/app.js",
-                 "~/Scripts/app/routes.js",
-                 "~/Scripts/app/home/home.controller.js"
-                ));
+                "~/Scripts/app/routes.js",
+                "~/Scripts/app/home/home.controller.js",
+                "~/Scripts/app/ngMenuBiblioteca/ngMenuBiblioteca.directive.js",
+                "~/Scripts/app/editorial/editorial.controller.js"
+                ));// importa el orden se carga primero el angular y depues el resto
+            //el bundles lo que hace es que lo carga en el documento
         }
     }
 }
