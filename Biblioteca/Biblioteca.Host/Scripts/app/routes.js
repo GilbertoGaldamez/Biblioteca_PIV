@@ -1,17 +1,22 @@
-﻿// aqui se configuran las rutas
-//api.config carga todos los modulos
+﻿// Tarea 6
+// Gilberto Galdamez | 61411121
+
 app.config(['$routeProvider',
     function ($routerProvider) {
         $routerProvider
-        .when('/', {   // cuando la ruta cumpla el homee que imprima lo siguiente linea
+        .when('/', {
             templateUrl: "/Scripts/app/home/home.template.html",
-            controller: "homeController" // este controlador se asocia a la vista de arriba
+            controller: "homeController" 
         })
             .when('/editoriales', {
                 templateUrl: "/Scripts/app/editorial/editorial.template.html",
                 controller: "editorialController"
             })
-        .otherwise({ // si no encuentra la ruta adecuada que regrese al home
+            .when('/libros', {      // Agregada la ruta de libros
+                templateUrl: "/Scripts/app/libro/libro.template.html",
+                controller: "libroController"
+            })
+        .otherwise({ 
             reditecTo: '/'
         })
     }

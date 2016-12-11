@@ -1,0 +1,79 @@
+﻿<!--
+Tarea 6
+Gilberto Galdamez | 61411121
+-->
+ 
+<form name="libroForm" novalidate>
+    <div class="form-group">
+        <label for="librolId">Id:</label>
+        <input class="form-control"
+               id="librolId"
+               ng-model="libroActual.Id"
+               ng-disabled="true" />
+    </div>
+    <div class="form-group">
+        <label for="libroNombre">Nombre:</label>
+        <input class="form-control"
+               id="librolNombre"
+               name="libroNombre"
+               ng-model="libroActual.Nombre"
+               required
+               ng-minlength="3"
+               ng-maxlength="25" />
+        <div ng-messages="libroForm.libroNombre.$error">
+            <div ng-message="required">El nombre es requerido</div>
+            <div ng-message="minlength">El nombre del libro debe de tener mas 3 de caracteres</div>
+            <div ng-message="maxlength">El nombre del libro debe tener menos de 25 carateres</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="libroAnio">Año:</label>
+        <input class="form-control"
+               type="number"
+               id="librolAnio"
+               name="libroAnio"
+               ng-model="libroActual.Anio"
+               required />
+        <div ng-messages="libroForm.libroAnio.$error">
+            <div ng-message="required">El año es requerido</div>
+            <div ng-message="maxlength">El año debe tener menos de 4 digitos</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Editorial</label>
+        <!-- Itera en la coleccion de Editoriales -->
+        <select class="form-control" ng-model="editorialSeleccionado"
+                ng-options="editorial.Nombre for editorial in editoriales"
+                required>
+        </select>
+        <div ng-messages="libroForm.libroEditorial.$error">
+            <div ng-message="required">El editorial del libro es requerido</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button ng-disabled="libroForm.$invalid" ng-click="salvarLibro()" class="btn btn-primary">{{accionActual}}</button>
+        <button ng-click="limpiar()" class="btn btn-default">Cancelar</button>
+    </div>
+</form>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Año</th>
+        <th>Editorial</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="libro in libros">
+        <td>{{libro.Id}}</td>
+        <td>{{libro.Nombre}}</td>
+        <td>{{libro.Anio}}</td>
+        <td>{{libro.Editorial.Nombre}}</td>
+        <td>
+            <button ng-click="editar(libro)" class="btn btn-link">Editar</button>
+        </td>
+        <td>
+            <button ng-click="eliminar(libro)" class="btn btn-link">Eliminar</button>
+        </td>
+    </tr>
+</table>
